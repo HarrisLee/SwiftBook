@@ -7,11 +7,16 @@
 //
 
 #import "MixObject.h"
+#import "SwiftModule-swift.h"
 
 @implementation MixObject
 
 - (void)sayHello{
     NSLog(@"hello");
+    
+    Person *per = [[Person alloc] init];
+    [per showName];
+    
 }
 
 /*
