@@ -13,6 +13,7 @@
 		4482A2D21C5B406600D8DC9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4482A2D01C5B406600D8DC9F /* Main.storyboard */; };
 		4482A2D41C5B406600D8DC9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4482A2D31C5B406600D8DC9F /* Assets.xcassets */; };
 		4482A2D71C5B406600D8DC9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4482A2D51C5B406600D8DC9F /* LaunchScreen.storyboard */; };
+		44F073651C7D3F04008507AA /* MixObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F073641C7D3F04008507AA /* MixObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		4482A2D31C5B406600D8DC9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4482A2D61C5B406600D8DC9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4482A2D81C5B406600D8DC9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44F073621C7D3F04008507AA /* MyApp_Object-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyApp_Object-Bridging-Header.h"; sourceTree = "<group>"; };
+		44F073631C7D3F04008507AA /* MixObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixObject.h; sourceTree = "<group>"; };
+		44F073641C7D3F04008507AA /* MixObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,9 @@
 				4482A2D51C5B406600D8DC9F /* LaunchScreen.storyboard */,
 				4482A2D81C5B406600D8DC9F /* Info.plist */,
 				442B0E0A1C72F89000F01484 /* Animal.swift */,
+				44F073631C7D3F04008507AA /* MixObject.h */,
+				44F073641C7D3F04008507AA /* MixObject.m */,
+				44F073621C7D3F04008507AA /* MyApp_Object-Bridging-Header.h */,
 			);
 			path = MyApp_Object;
 			sourceTree = "<group>";
@@ -142,6 +149,7 @@
 				4482A2CF1C5B406600D8DC9F /* ViewController.swift in Sources */,
 				4482A2CD1C5B406600D8DC9F /* AppDelegate.swift in Sources */,
 				442B0E0B1C72F89000F01484 /* Animal.swift in Sources */,
+				44F073651C7D3F04008507AA /* MixObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,10 +260,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MyApp_Object/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.suning.MyApp-Object";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyApp_Object/MyApp_Object-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -263,10 +274,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MyApp_Object/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.suning.MyApp-Object";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyApp_Object/MyApp_Object-Bridging-Header.h";
 			};
 			name = Release;
 		};

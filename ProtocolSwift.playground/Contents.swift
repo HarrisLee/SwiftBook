@@ -5,6 +5,15 @@ import UIKit
 let numbers = [1,3,5,6,7,8];
 let nums = numbers.map({num in 3*num});
 
+func showName(inout name:String){
+    name = "111";
+}
+
+var name = "jim";
+showName(&name);
+name;
+
+
 enum Rank: Int {
     case Ace = 1;
     case Two,Three,Four,Five,Six,Seven;
@@ -35,6 +44,7 @@ enum Suit:Int {
 var ace = Rank.Three;
 print(ace.simpleDes());
 print(ace.rawValue);
+
 
 ace = Rank.Two;
 print(ace.simpleDes());

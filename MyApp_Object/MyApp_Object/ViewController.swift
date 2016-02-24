@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -39,6 +40,9 @@ class ViewController: UIViewController {
         let vi = UIView(frame: rect);
         vi.backgroundColor = UIColor.redColor();
         self.view.addSubview(vi);
+        
+        let obj = MixObject();
+        obj.sayHello();
         
     }
     
