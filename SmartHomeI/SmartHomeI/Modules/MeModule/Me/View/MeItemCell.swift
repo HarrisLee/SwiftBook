@@ -62,7 +62,7 @@ class MeItemCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier);
         self.setUpView();
         let sView = UIView.init();
-        sView.backgroundColor = RBGWhite(white: 0.78);
+        sView.backgroundColor = RBGWhite(white: 0.88);
         self.selectedBackgroundView = sView;
     }
     
