@@ -35,9 +35,8 @@ class RMContainerViewController: UITabBarController {
         mallNavi.tabBarItem.image = UIImage.init(named: "tab_icon_mall");
         mallNavi.tabBarItem.selectedImage = UIImage.init(named: "tab_icon_mall_sel");
         
-        let me = HomeViewController();
+        let me = MeViewController();
         let meNavi = RMNavigationController.init(rootViewController: me);
-        me.title = "我的";
         meNavi.tabBarItem.title = "我的";
         meNavi.tabBarItem.image = UIImage.init(named: "tab_icon_me");
         meNavi.tabBarItem.selectedImage = UIImage.init(named: "tab_icon_me_sel");

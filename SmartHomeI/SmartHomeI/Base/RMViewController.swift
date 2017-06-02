@@ -7,6 +7,16 @@
 //
 
 import UIKit
+import Alamofire
+import DGElasticPullToRefresh
+import FillableLoaders
+import Kingfisher
+import MBProgressHUD
+import ReachabilitySwift
+import SnapKit
+import SQLite
+import StarWars
+import SwiftyJSON
 
 class RMViewController: UIViewController {
 
@@ -15,14 +25,19 @@ class RMViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor.white;
+        self.automaticallyAdjustsScrollViewInsets = false;
     }
+    
+    open override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent;
+    }
+   
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
