@@ -18,6 +18,7 @@ import SQLite
 import StarWars
 import SwiftyJSON
 
+
 class RMViewController: UIViewController {
 
     override func viewDidLoad() {

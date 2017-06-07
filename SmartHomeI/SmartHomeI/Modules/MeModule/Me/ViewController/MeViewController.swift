@@ -8,6 +8,7 @@
 
 import UIKit
 import ReachabilitySwift
+import Moya
 
 class MeViewController: RMViewController,UITableViewDelegate,UITableViewDataSource {
     
@@ -20,7 +21,6 @@ class MeViewController: RMViewController,UITableViewDelegate,UITableViewDataSour
         self.navigationController?.isNavigationBarHidden = true;
         self.view.backgroundColor = ME_COLOR;
         self.setUpView();
-
     }
     
     func setUpView() {
