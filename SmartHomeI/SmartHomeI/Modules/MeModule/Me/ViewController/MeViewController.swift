@@ -12,6 +12,7 @@ import Moya
 
 class MeViewController: RMViewController,UITableViewDelegate,UITableViewDataSource {
     
+    let dynamicItems : NSArray = [["title":"体验中心","icon":"me_icon_express"],["title":"售后服务","icon":"me_icon_afterservice"]];
     let items : NSArray = [["title":"常见问题","icon":"me_icon_faq"],["title":"联系我们","icon":"me_icon_online"],["title":"关于","icon":"me_icon_about"]];
     
     override func viewDidLoad() {
@@ -39,7 +40,7 @@ class MeViewController: RMViewController,UITableViewDelegate,UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 1 ? 3 : 2;
+        return section == 1 ? 3 : dynamicItems.count;
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -61,15 +62,16 @@ class MeViewController: RMViewController,UITableViewDelegate,UITableViewDataSour
         cell.isTop = indexPath.row == 0;
         switch indexPath.section {
         case 0:
-            cell.title =  "index:\(indexPath.row)";
-            cell.iconUrl = "me_icon_faq";
+            let model = dynamicItems[indexPath.row] as! NSDictionary;
+            cell.title =  model.value(forKey: "title") as? String;
+            cell.iconUrl = model.value(forKey: "icon") as? String;
             cell.isBottom = (indexPath.row + 1 == 2);
         default:
             let model = items[indexPath.row] as! NSDictionary;
             cell.title =  model.value(forKey: "title") as? String;
             cell.iconUrl = model.value(forKey: "icon") as? String;
             cell.isBottom = (indexPath.row + 1 == items.count);
-            cell.showRightInfo(info: (indexPath.row == 1 ?  "" : "4008-365-365"));
+//            cell.showRightInfo(info: (indexPath.row != 1 ?  "" : "4008-365-365"));
         }
         
         return cell;
