@@ -38,6 +38,7 @@
 		442FF7BF1EE14CEB0003D121 /* icon_scene_rightarrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 442FF7BE1EE14CEB0003D121 /* icon_scene_rightarrow@3x.png */; };
 		44C5439A1EEE3D4B0062B6A4 /* me_icon_afterservice@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44C543991EEE3D4B0062B6A4 /* me_icon_afterservice@3x.png */; };
 		44C5439C1EEE3D530062B6A4 /* me_icon_express@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44C5439B1EEE3D530062B6A4 /* me_icon_express@3x.png */; };
+		44C543C51EEE7B8D0062B6A4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C543C41EEE7B8D0062B6A4 /* Utils.swift */; };
 		44F5C9071EDFA7CF008BA6A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F5C8621EDFA7CF008BA6A6 /* AppDelegate.swift */; };
 		44F5C91F1EDFA7CF008BA6A6 /* back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44F5C8A81EDFA7CF008BA6A6 /* back@3x.png */; };
 		44F5C9451EDFA88C008BA6A6 /* RMContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F5C9441EDFA88C008BA6A6 /* RMContainerViewController.swift */; };
@@ -98,6 +99,7 @@
 		442FF7BE1EE14CEB0003D121 /* icon_scene_rightarrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_scene_rightarrow@3x.png"; sourceTree = "<group>"; };
 		44C543991EEE3D4B0062B6A4 /* me_icon_afterservice@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "me_icon_afterservice@3x.png"; sourceTree = "<group>"; };
 		44C5439B1EEE3D530062B6A4 /* me_icon_express@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "me_icon_express@3x.png"; sourceTree = "<group>"; };
+		44C543C41EEE7B8D0062B6A4 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		44F5C84C1EDFA574008BA6A6 /* SmartHomeI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartHomeI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44F5C8621EDFA7CF008BA6A6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44F5C87E1EDFA7CF008BA6A6 /* AppConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConstant.h; sourceTree = "<group>"; };
@@ -390,6 +392,7 @@
 		44F5C8A91EDFA7CF008BA6A6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				44C543C41EEE7B8D0062B6A4 /* Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -626,6 +629,7 @@
 				442FF7891EE0FF9F0003D121 /* MeHeaderView.swift in Sources */,
 				44F5C9471EDFA8C3008BA6A6 /* RMViewController.swift in Sources */,
 				442FF7871EE0FF820003D121 /* HomeViewController.swift in Sources */,
+				44C543C51EEE7B8D0062B6A4 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

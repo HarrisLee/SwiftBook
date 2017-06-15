@@ -17,7 +17,7 @@ import SnapKit
 import SQLite
 import StarWars
 import SwiftyJSON
-
+import SwiftyUtils
 
 class RMViewController: UIViewController {
 

@@ -48,12 +48,28 @@ class HomeViewController: RMViewController {
             make.width.height.equalTo(200);
             make.centerX.centerY.equalTo(self.view);
         }
+
+        let info = ["name":"luck","location":"NJ"];
+        guard let name = info["name"] else {
+            print("you should input a name");
+            return;
+        }
+        print("you had input a \(name)");
+        if #available(iOS 10, *) {
+            // 在 iOS 使用 iOS 10 的 API, 在 macOS 使用 macOS 10.12 的 API
+            print("os version 10.0");
+        } else {
+            // 使用先前版本的 iOS 和 macOS 的 API
+            print("you had input a \(name)");
+        }
     }
 
     func goHome(address:String) -> String {
         
         return "name:".appending(address);
     }
+    
+  
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -22,6 +22,9 @@ class MeViewController: RMViewController,UITableViewDelegate,UITableViewDataSour
         self.navigationController?.isNavigationBarHidden = true;
         self.view.backgroundColor = ME_COLOR;
         self.setUpView();
+        
+        Utils.sayHello(msg: "你们好");
+        
     }
     
     func setUpView() {
@@ -73,7 +76,6 @@ class MeViewController: RMViewController,UITableViewDelegate,UITableViewDataSour
             cell.isBottom = (indexPath.row + 1 == items.count);
 //            cell.showRightInfo(info: (indexPath.row != 1 ?  "" : "4008-365-365"));
         }
-        
         return cell;
     }
     
@@ -89,7 +91,7 @@ class MeViewController: RMViewController,UITableViewDelegate,UITableViewDataSour
     lazy var meTable:UITableView = {
         let table = UITableView.init(frame: CGRect.zero, style: UITableViewStyle.plain);
         table.register(MeItemCell.self, forCellReuseIdentifier: "cell");
-        table.backgroundColor = UIColor.clear;
+        table.backgroundColor = .clear;
         table.delegate = self;
         table.dataSource = self;
         table.separatorStyle = .none;
