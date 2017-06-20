@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Kingfisher
+
+public typealias headerClick = ((_ identifier:Int)->())
 
 class MeHeaderView: UIView {
     var line : UIView!
@@ -18,6 +21,7 @@ class MeHeaderView: UIView {
     var seceneButton : UIButton!;
     var msgButton : UIButton!;
     var unreadView : UIView!;
+    var clickBlock : headerClick!;
     
     override init(frame: CGRect) {
         super.init(frame: frame);
@@ -57,11 +61,13 @@ class MeHeaderView: UIView {
         };
         
         seceneButton = UIButton.init(type: .custom);
+        seceneButton.tag = 1000;
         seceneButton.setTitle("智能场景", for: .normal);
         seceneButton.setImage(UIImage.init(named: "me_icon_secene"), for: .normal);
         seceneButton.titleLabel?.font = RM_FONT_28PX;
         seceneButton.setTitleColor(UIColor.white, for: .normal);
         seceneButton.titleEdgeInsets = UIEdgeInsets.init(top: 0, left: 10, bottom: 0, right: 0);
+        seceneButton.addTarget(self, action: #selector(self.itemClick(identifier:)), for: .touchUpInside);
         self.addSubview(seceneButton);
         seceneButton.snp.makeConstraints { (make) in
             make.left.bottom.equalTo(backgroundImage);
@@ -70,11 +76,13 @@ class MeHeaderView: UIView {
         };
         
         msgButton = UIButton.init(type: .custom);
+        msgButton.tag = 2000;
         msgButton.setTitle("消息中心", for: .normal);
         msgButton.setImage(UIImage.init(named: "me_icon_mycenter"), for: .normal);
         msgButton.titleLabel?.font = RM_FONT_28PX;
         msgButton.setTitleColor(UIColor.white, for: .normal);
         msgButton.titleEdgeInsets = UIEdgeInsets.init(top: 0, left: 10, bottom: 0, right: 0);
+        msgButton.addTarget(self, action: #selector(self.itemClick(identifier:)), for: .touchUpInside);
         self.addSubview(msgButton);
         msgButton.snp.makeConstraints { (make) in
             make.left.equalTo(seceneButton.snp.right).offset(0.5);
@@ -103,6 +111,7 @@ class MeHeaderView: UIView {
         }
         
         iconView = UIImageView.init(image: UIImage.init(named: "me_icon_unlogin"));
+        iconView.tag = 3000;
         iconView.layer.cornerRadius = 40;
         iconView.clipsToBounds = true;
         iconView.isUserInteractionEnabled = true;
@@ -112,7 +121,38 @@ class MeHeaderView: UIView {
             make.bottom.equalTo(nameLabel.snp.top).offset(-10);
             make.centerX.equalTo(self);
         }
+        
+        let ges = UITapGestureRecognizer.init(target: self, action: #selector(self.headerClick(ges:)));
+        iconView.addGestureRecognizer(ges);
+//        let source = ImageResource.init(downloadURL: URL.init(string: "wwwww")!);
+//        iconView.kf.setImage(with: source);
+    
+//        let add: (Int,Int)->Int = {
+//            (a,b) in return a+b;
+//        };
+//        
+//        let bl : headerClick = {
+//            param in
+//            print(param);
+//        }
+//        bl("user");
+//        print(add(2,5));
+        
     }
+    
+    func item(click:@escaping headerClick) {
+        self.clickBlock = click;
+    }
+    
+    func headerClick(ges:UIGestureRecognizer) -> Void {
+        self.clickBlock((ges.view?.tag)!);
+    }
+    
+    func itemClick(identifier:UIButton) -> Void {
+        self.clickBlock(identifier.tag);
+    }
+    
+    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

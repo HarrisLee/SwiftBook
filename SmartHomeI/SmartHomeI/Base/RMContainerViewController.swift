@@ -43,8 +43,6 @@ class RMContainerViewController: UITabBarController {
         
         self.tabBar.tintColor = UIColor.init(colorLiteralRed: 0.14, green: 0.71, blue: 0.97, alpha: 1.0);
         self.viewControllers = [homeNavi,communityNavi,mallNavi,meNavi];
-        
-        print(home.goHome(address: "江苏省"));
     }
 
     override func didReceiveMemoryWarning() {

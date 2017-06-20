@@ -48,25 +48,37 @@ class HomeViewController: RMViewController {
             make.width.height.equalTo(200);
             make.centerX.centerY.equalTo(self.view);
         }
+        
+        var nanj = "NA";
+        print(goHome(address: &nanj));
+        print(goHome(address: &nanj, country: "YZ"));
 
-        let info = ["name":"luck","location":"NJ"];
-        guard let name = info["name"] else {
-            print("you should input a name");
-            return;
-        }
-        print("you had input a \(name)");
-        if #available(iOS 10, *) {
-            // 在 iOS 使用 iOS 10 的 API, 在 macOS 使用 macOS 10.12 的 API
-            print("os version 10.0");
-        } else {
-            // 使用先前版本的 iOS 和 macOS 的 API
-            print("you had input a \(name)");
-        }
+        print(Utils.greeting(person: "Henry"));
+        
+        let msg = greet(fullName: fullName(first:last:), location: "NanJing", name: "meng", family: "zhang");
+        print(msg);
+        
+        print(who(first: "1", last: "2")("小","李"));
+        
     }
 
-    func goHome(address:String) -> String {
+    func fullName(first:String,last:String) -> String
+    {
+        return first + "," + last;
+    }
+    
+    func who(first:String,last:String) -> (String,String)->String {
+        return fullName;
+    }
+    
+    func greet(fullName:(String,String)->String,location:String,name:String,family:String) -> String {
+        return "I greeting " + fullName(family,name) + " at " + location + "!";
+    }
+    
+    func goHome( address:inout String,country:String = "nj") -> String {
         
-        return "name:".appending(address);
+        address = address.appending(country);
+        return "name:".appending(address).appending(country);
     }
     
   

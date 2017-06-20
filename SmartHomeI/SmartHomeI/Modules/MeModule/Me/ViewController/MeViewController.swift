@@ -25,6 +25,14 @@ class MeViewController: RMViewController,UITableViewDelegate,UITableViewDataSour
         
         Utils.sayHello(msg: "你们好");
         
+        self.headerView.item {[weak self] (tag) in
+            print("click:\(tag)");
+            self?.sayHello(msg: "Hello \(tag)");
+        }
+    }
+    
+    func sayHello(msg:String) -> Void {
+        print("msg is :\(msg)");
     }
     
     func setUpView() {
@@ -81,6 +89,7 @@ class MeViewController: RMViewController,UITableViewDelegate,UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true);
+        
     }
     
     override func didReceiveMemoryWarning() {

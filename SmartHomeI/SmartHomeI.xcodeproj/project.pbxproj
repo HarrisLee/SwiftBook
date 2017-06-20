@@ -61,7 +61,6 @@
 		44F5C96B1EDFABB0008BA6A6 /* tab_icon_me_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44F5C95B1EDFABB0008BA6A6 /* tab_icon_me_sel@2x.png */; };
 		44F5C96C1EDFABB0008BA6A6 /* tab_icon_me_sel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44F5C95C1EDFABB0008BA6A6 /* tab_icon_me_sel@3x.png */; };
 		44F5C9901EE0149C008BA6A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44F5C98D1EE0149C008BA6A6 /* Assets.xcassets */; };
-		44F5C9911EE0149C008BA6A6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44F5C98E1EE0149C008BA6A6 /* Info.plist */; };
 		7EEF7C96415523BDF098BAFE /* Pods_SmartHomeI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B7B971B0A2D05C3724814B /* Pods_SmartHomeI.framework */; };
 /* End PBXBuildFile section */
 
@@ -533,7 +532,6 @@
 				44F5C9611EDFABB0008BA6A6 /* tab_icon_home@2x.png in Resources */,
 				44F5C9671EDFABB0008BA6A6 /* tab_icon_mall_sel@2x.png in Resources */,
 				442FF7A51EE1154A0003D121 /* me_icon_feedback@2x.png in Resources */,
-				44F5C9911EE0149C008BA6A6 /* Info.plist in Resources */,
 				442FF7A11EE1154A0003D121 /* feedSelect@2x.png in Resources */,
 				442FF7A71EE1154A0003D121 /* me_icon_mycenter@3x.png in Resources */,
 				44F5C9661EDFABB0008BA6A6 /* tab_icon_mall@3x.png in Resources */,
@@ -640,6 +638,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -690,6 +689,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -733,6 +733,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 20417249883FB899EB3C93AC /* Pods-SmartHomeI.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
@@ -749,6 +750,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 34C5799EC04B11E705FAB5FB /* Pods-SmartHomeI.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
